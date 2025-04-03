@@ -294,101 +294,143 @@
 <!-- /success story -->
 
 <!-- events (repurposed as University Partners) -->
+<!-- Popular Courses with Filter -->
 <section class="section bg-gray">
   <div class="container">
     <div class="row">
-      <div class="col-12">
-        <div class="d-flex align-items-center section-title justify-content-between">
-          <h2 class="mb-0 text-nowrap mr-3">We change the way of Learning!</h2>
-          <div class="border-top w-100 border-primary d-none d-sm-block"></div>
-          <div>
-            <a href="universities.html" class="btn btn-sm btn-outline-primary ml-sm-3 d-none d-sm-block">see all</a>
+      <div class="col-12 text-center mb-5">
+        <h2 class="section-title">Popular Courses</h2>
+      </div>
+    </div>
+
+    <!-- Course Filter -->
+    <div class="row mb-4">
+      <div class="col-12 text-center">
+        <div class="btn-group btn-group-toggle flex-wrap" data-toggle="buttons">
+          <label class="btn btn-outline-primary active">
+            <input type="radio" name="course-filter" value="popular" checked> Popular Courses
+          </label>
+          <label class="btn btn-outline-primary">
+            <input type="radio" name="course-filter" value="subharti"> Subharti University
+          </label>
+          <label class="btn btn-outline-primary">
+            <input type="radio" name="course-filter" value="gyanvihar"> Suresh Gyan Vihar
+          </label>
+          <label class="btn btn-outline-primary">
+            <input type="radio" name="course-filter" value="lpu"> LPU Online
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <div class="row shuffle-wrapper">
+      <!-- BBA (Popular) -->
+      <div class="col-lg-4 col-md-6 mb-4 shuffle-item" data-groups='["popular"]'>
+        <div class="card border-0 shadow-sm h-100">
+          <img src="images/courses/bba.jpg" class="card-img-top" alt="Bachelor of Business Administration">
+          <div class="card-body">
+            <h5 class="card-title">BBA</h5>
+            <a href="bba-details.html" class="btn btn-sm btn-primary mt-3">View Details</a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- MBA (Popular & Subharti) -->
+      <div class="col-lg-4 col-md-6 mb-4 shuffle-item" data-groups='["popular","subharti"]'>
+        <div class="card border-0 shadow-sm h-100">
+          <img src="images/courses/mba.jpg" class="card-img-top" alt="Master of Business Administration">
+          <div class="card-body">
+            <h5 class="card-title">MBA</h5>
+            <a href="mba-details.html" class="btn btn-sm btn-primary mt-3">View Details</a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- MCA (Popular) -->
+      <div class="col-lg-4 col-md-6 mb-4 shuffle-item" data-groups='["popular"]'>
+        <div class="card border-0 shadow-sm h-100">
+          <img src="images/courses/mca.jpg" class="card-img-top" alt="Master of Computer Applications">
+          <div class="card-body">
+            <h5 class="card-title">MCA</h5>
+            <a href="mca-details.html" class="btn btn-sm btn-primary mt-3">View Details</a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- BCA (Subharti & LPU) -->
+      <div class="col-lg-4 col-md-6 mb-4 shuffle-item" data-groups='["subharti","lpu"]'>
+        <div class="card border-0 shadow-sm h-100">
+          <img src="images/courses/bca.jpg" class="card-img-top" alt="Bachelor of Computer Applications">
+          <div class="card-body">
+            <h5 class="card-title">BCA</h5>
+            <a href="bca-details.html" class="btn btn-sm btn-primary mt-3">View Details</a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- BA (Subharti & Gyan Vihar & LPU) -->
+      <div class="col-lg-4 col-md-6 mb-4 shuffle-item" data-groups='["subharti","gyanvihar","lpu"]'>
+        <div class="card border-0 shadow-sm h-100">
+          <img src="images/courses/ba.jpg" class="card-img-top" alt="Bachelor of Arts">
+          <div class="card-body">
+            <h5 class="card-title">BA</h5>
+            <a href="ba-details.html" class="btn btn-sm btn-primary mt-3">View Details</a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- MA (Gyan Vihar) -->
+      <div class="col-lg-4 col-md-6 mb-4 shuffle-item" data-groups='["gyanvihar"]'>
+        <div class="card border-0 shadow-sm h-100">
+          <img src="images/courses/ma.jpg" class="card-img-top" alt="Master of Arts">
+          <div class="card-body">
+            <h5 class="card-title">MA</h5>
+            <a href="ma-details.html" class="btn btn-sm btn-primary mt-3">View Details</a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- B.Com (Gyan Vihar & LPU) -->
+      <div class="col-lg-4 col-md-6 mb-4 shuffle-item" data-groups='["gyanvihar","lpu"]'>
+        <div class="card border-0 shadow-sm h-100">
+          <img src="images/courses/bcom.jpg" class="card-img-top" alt="Bachelor of Commerce">
+          <div class="card-body">
+            <h5 class="card-title">B.Com</h5>
+            <a href="bcom-details.html" class="btn btn-sm btn-primary mt-3">View Details</a>
           </div>
         </div>
       </div>
     </div>
-    <div class="row justify-content-center">
-      <!-- university 1 -->
-      <div class="col-lg-4 col-md-6 mb-5">
-        <div class="card border-0 rounded-0 hover-shadow h-100">
-          <div class="card-img position-relative">
-            <img class="card-img-top rounded-0" src="images/events/event-1.jpg" alt="USA universities">
-            <div class="card-date"><span>USA</span></div>
-          </div>
-          <div class="card-body">
-            <p><i class="ti-location-pin text-primary mr-2"></i>Top Ranked Universities</p>
-            <a href="university-single.html"><h4 class="card-title">United States</h4></a>
-          </div>
-        </div>
-      </div>
-      <!-- university 2 -->
-      <div class="col-lg-4 col-md-6 mb-5">
-        <div class="card border-0 rounded-0 hover-shadow h-100">
-          <div class="card-img position-relative">
-            <img class="card-img-top rounded-0" src="images/events/event-2.jpg" alt="UK universities">
-            <div class="card-date"><span>UK</span></div>
-          </div>
-          <div class="card-body">
-            <p><i class="ti-location-pin text-primary mr-2"></i>Russell Group Universities</p>
-            <a href="university-single.html"><h4 class="card-title">United Kingdom</h4></a>
-          </div>
-        </div>
-      </div>
-      <!-- university 3 -->
-      <div class="col-lg-4 col-md-6 mb-5">
-        <div class="card border-0 rounded-0 hover-shadow h-100">
-          <div class="card-img position-relative">
-            <img class="card-img-top rounded-0" src="images/events/event-3.jpg" alt="Canada universities">
-            <div class="card-date"><span>CAN</span></div>
-          </div>
-          <div class="card-body">
-            <p><i class="ti-location-pin text-primary mr-2"></i>Post-Study Work Options</p>
-            <a href="university-single.html"><h4 class="card-title">Canada</h4></a>
-          </div>
-        </div>
-      </div>
-      <!-- university 4 -->
-      <div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
-        <div class="card border-0 rounded-0 hover-shadow h-100">
-          <div class="card-img position-relative">
-            <img class="card-img-top rounded-0" src="images/events/event-1.jpg" alt="Australia universities">
-            <div class="card-date"><span>AUS</span></div>
-          </div>
-          <div class="card-body">
-            <p><i class="ti-location-pin text-primary mr-2"></i>World-Class Education</p>
-            <a href="university-single.html"><h4 class="card-title">Australia</h4></a>
-          </div>
-        </div>
-      </div>
-      <!-- university 5 -->
-      <div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
-        <div class="card border-0 rounded-0 hover-shadow h-100">
-          <div class="card-img position-relative">
-            <img class="card-img-top rounded-0" src="images/events/event-2.jpg" alt="Germany universities">
-            <div class="card-date"><span>GER</span></div>
-          </div>
-          <div class="card-body">
-            <p><i class="ti-location-pin text-primary mr-2"></i>Tuition-Free Options</p>
-            <a href="university-single.html"><h4 class="card-title">Germany</h4></a>
-          </div>
-        </div>
-      </div>
-      <!-- university 6 -->
-      <div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
-        <div class="card border-0 rounded-0 hover-shadow h-100">
-          <div class="card-img position-relative">
-            <img class="card-img-top rounded-0" src="images/events/event-3.jpg" alt="France universities">
-            <div class="card-date"><span>FRA</span></div>
-          </div>
-          <div class="card-body">
-            <p><i class="ti-location-pin text-primary mr-2"></i>Affordable Education</p>
-            <a href="university-single.html"><h4 class="card-title">France</h4></a>
-          </div>
-        </div>
+
+    <div class="row mt-4">
+      <div class="col-12 text-center">
+        <a href="all-courses.html" class="btn btn-primary">View All Courses</a>
       </div>
     </div>
   </div>
 </section>
+
+<!-- JavaScript for Filter Functionality -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Shuffle/5.2.3/shuffle.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Initialize Shuffle for Courses
+    const courseShuffle = new Shuffle(document.querySelector('.section.bg-gray .shuffle-wrapper'), {
+      itemSelector: '.shuffle-item',
+      sizer: null
+    });
+
+    // Set default filter to show Popular Courses
+    courseShuffle.filter('popular');
+
+    // Course Filter buttons
+    document.querySelectorAll('input[name="course-filter"]').forEach(input => {
+      input.addEventListener('change', function() {
+        courseShuffle.filter(this.value);
+      });
+    });
+  });
+</script>
 <!-- /events -->
 
 
