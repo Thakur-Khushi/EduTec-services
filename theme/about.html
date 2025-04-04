@@ -43,7 +43,44 @@
   <!--Favicon-->
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
   <link rel="icon" href="images/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    .hero-section {
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/about-banner.jpg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 100px 0;
+      text-align: center;
+    }
+    .section-title {
+      position: relative;
+      margin-bottom: 30px;
+      padding-bottom: 15px;
+    }
+    .section-title:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 50px;
+      height: 3px;
+      background: #ffbc3b;
+    }
+    .feature-box {
+      padding: 30px;
+      border-radius: 5px;
+      margin-bottom: 30px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+    }
+    .feature-box:hover {
+      transform: translateY(-10px);
+      background-color: #ffbc3b;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    }
 
+  </style>
 </head>
 
 <body>
@@ -70,9 +107,7 @@
         </div>
         <div class="col-lg-8 text-center text-lg-right">
           <ul class="list-inline">
-            <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="notice.html">notice</a></li>
-            <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="research.html">research</a></li>
-            <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="scholarship.html">SCHOLARSHIP</a></li>
+
             <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="#loginModal" data-toggle="modal" data-target="#loginModal">login</a></li>
             <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="#signupModal" data-toggle="modal" data-target="#signupModal">register</a></li>
           </ul>
@@ -107,33 +142,7 @@
             <li class="nav-item @@blog">
               <a class="nav-link" href="blog.html">BLOG</a>
             </li>
-            <li class="nav-item dropdown view">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Pages
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="teacher.html">Teacher</a></li>
-                <li><a class="dropdown-item" href="teacher-single.html">Teacher Single</a></li>
-                <li><a class="dropdown-item" href="notice.html">Notice</a></li>
-                <li><a class="dropdown-item" href="notice-single.html">Notice Details</a></li>
-                <li><a class="dropdown-item" href="research.html">Research</a></li>
-                <li><a class="dropdown-item" href="scholarship.html">Scholarship</a></li>
-                <li><a class="dropdown-item" href="course-single.html">Course Details</a></li>
-                <li><a class="dropdown-item" href="event-single.html">Event Details</a></li>
-                <li><a class="dropdown-item" href="blog-single.html">Blog Details</a></li>
-                
-                <li class="dropdown-item dropdown dropleft">
-                  <a class="dropdown-toggle" href="#" id="navbarDropdownSubmenu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Sub Menu
-                  </a>
-                  <ul class="dropdown-menu dropdown-submenu" aria-labelledby="navbarDropdownSubmenu">
-                    <li><a class="dropdown-item" href="#!">Sub Menu 01</a></li>
-                    <li><a class="dropdown-item" href="#!">Sub Menu 02</a></li>
-                    <li><a class="dropdown-item" href="#!">Sub Menu 03</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
+            
             <li class="nav-item @@contact">
               <a class="nav-link" href="contact.html">CONTACT</a>
             </li>
@@ -224,150 +233,98 @@
 </section>
 <!-- /page title -->
 
-<!-- about -->
-<section class="section">
+<!-- About Section -->
+<section class="py-5">
   <div class="container">
     <div class="row">
-      <div class="col-12">
-        <img class="img-fluid w-100 mb-4" src="images/about/about-page.jpg" alt="about image">
-        <h2 class="section-title">ABOUT OUR JOURNY</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.dolore magna aliqua. Ut enim ad minim veniam, quis nostrud. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe ipsa illo quod veritatis, magni debitis fugiat dolore voluptates! Consequatur, aliquid. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat perferendis sint optio similique. Et amet magni facilis vero corporis quos.</p>
-        <p>exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum a, facere fugit error accusamus est officiis vero in, nostrum laboriosam corrupti explicabo, cumque repudiandae deleniti perspiciatis quae consectetur enim. Laboriosam!</p>
+      <div class="col-lg-6">
+        <h2 class="section-title">Our Story</h2>
+        <p>EduTantra was founded in 2010 with a vision to provide quality education to students preparing for competitive examinations. Our journey began with a small batch of 20 students and today we have successfully guided thousands of students towards their dream careers.</p>
+        <p>We believe in holistic development of students, focusing not just on academic excellence but also on building confidence and problem-solving skills that are essential for success in competitive examinations.</p>
+      </div>
+      <div class="col-lg-6">
+        <img src="images/about-image.jpg" alt="About EduTantra" class="img-fluid rounded">
       </div>
     </div>
   </div>
 </section>
-<!-- /about -->
 
-<!-- funfacts -->
-<section class="section-sm bg-primary">
+<!-- Mission Vision Section -->
+<section class="py-5 bg-light">
   <div class="container">
     <div class="row">
-      <!-- funfacts item -->
-      <div class="col-md-3 col-sm-6 mb-4 mb-md-0">
-        <div class="text-center">
-          <h2 class="count text-white" data-count="60">0</h2>
-          <h5 class="text-white">TEACHERS</h5>
+      <div class="col-md-6">
+        <div class="feature-box bg-white">
+          <i class="fas fa-bullseye fa-3x mb-3 text-primary"></i>
+          <h3>Our Mission</h3>
+          <p>To provide comprehensive, high-quality education that empowers students to excel in competitive examinations and realize their full potential.</p>
         </div>
       </div>
-      <!-- funfacts item -->
-      <div class="col-md-3 col-sm-6 mb-4 mb-md-0">
-        <div class="text-center">
-          <h2 class="count text-white" data-count="50">0</h2>
-          <h5 class="text-white">COURSES</h5>
-        </div>
-      </div>
-      <!-- funfacts item -->
-      <div class="col-md-3 col-sm-6 mb-4 mb-md-0">
-        <div class="text-center">
-          <h2 class="count text-white" data-count="1000">0</h2>
-          <h5 class="text-white">STUDENTS</h5>
-        </div>
-      </div>
-      <!-- funfacts item -->
-      <div class="col-md-3 col-sm-6 mb-4 mb-md-0">
-        <div class="text-center">
-          <h2 class="count text-white" data-count="3737">0</h2>
-          <h5 class="text-white">SATISFIED CLIENT</h5>
+      <div class="col-md-6">
+        <div class="feature-box bg-white">
+          <i class="fas fa-eye fa-3x mb-3 text-primary"></i>
+          <h3>Our Vision</h3>
+          <p>To be recognized as a premier institution that transforms students into confident, knowledgeable individuals capable of achieving academic excellence.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- /funfacts -->
 
-<!-- success story -->
-<section class="section bg-cover" data-background="images/backgrounds/success-story.jpg">
+<!-- Why Choose Us Section -->
+<section class="py-5">
   <div class="container">
+    <h2 class="section-title text-center mb-5">Why Choose EduTantra?</h2>
     <div class="row">
-      <div class="col-lg-6 col-sm-4 position-relative success-video">
-        <a class="play-btn venobox" href="https://youtu.be/nA1Aqp0sPQo" data-vbtype="video">
-          <i class="ti-control-play"></i>
-        </a>
+      <!-- First Row -->
+      <div class="col-md-6 mb-5">
+        <div class="feature-box text-center p-4">
+          <div class="icon-box bg-light rounded-circle d-inline-flex align-items-center justify-content-center mb-4" style="width: 80px; height: 80px;">
+            <i class="fas fa-chalkboard-teacher fa-3x text-primary"></i>
+          </div>
+          <h4 class="mb-3">Distance Learning</h4>
+          <p class="mb-0">Our expert educators are committed to student success through flexible and effective distance learning.
+          </p>
+        </div>
       </div>
-      <div class="col-lg-6 col-sm-8">
-        <div class="bg-white p-5">
-          <h2 class="section-title">Success Stories</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
+      <div class="col-md-6 mb-5">
+        <div class="feature-box text-center p-4">
+          <div class="icon-box bg-light rounded-circle d-inline-flex align-items-center justify-content-center mb-4" style="width: 80px; height: 80px;">
+            <i class="fas fa-book fa-3x text-primary"></i>
+          </div>
+          <h4 class="mb-3">Popular Programs</h4>
+          <p class="mb-0">Our popular programs come with meticulously prepared study materials that cover the entire syllabus with clarity and depth.</p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <!-- Second Row -->
+      <div class="col-md-6 mb-5">
+        <div class="feature-box text-center p-4">
+          <div class="icon-box bg-light rounded-circle d-inline-flex align-items-center justify-content-center mb-4" style="width: 80px; height: 80px;">
+            <i class="fas fa-chart-line fa-3x text-primary"></i>
+          </div>
+          <h4 class="mb-3">Wide Range Of Programs </h4>
+          <p class="mb-0">Our wide range of programs includes continuous evaluation through tests and assignments to track progress and identify areas for improvement.</p>
+        </div>
+      </div>
+      <div class="col-md-6 mb-5">
+        <div class="feature-box text-center p-4">
+          <div class="icon-box bg-light rounded-circle d-inline-flex align-items-center justify-content-center mb-4" style="width: 80px; height: 80px;">
+            <i class="fas fa-users fa-3x text-primary"></i>
+          </div>
+          <h4 class="mb-3">Easy Admission Process </h4>
+          <p class="mb-0">Our easy admission process leads you to small batch sizes that ensure individual attention and personalized guidance for every student.
+          </p>
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- /success story -->
+<!-- Faculty Section -->
 
-<!-- teachers -->
-<section class="section">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-12">
-          <h2 class="section-title">Our Teachers</h2>
-        </div>
-        <!-- teacher -->
-        <div class="col-lg-4 col-sm-6 mb-5 mb-lg-0">
-          <div class="card border-0 rounded-0 hover-shadow">
-            <img class="card-img-top rounded-0" src="images/teachers/teacher-1.jpg" alt="teacher">
-            <div class="card-body">
-              <a href="teacher-single.html">
-                <h4 class="card-title">Jacke Masito</h4>
-              </a>
-              <div class="d-flex justify-content-between">
-                <span>Teacher</span>
-                <ul class="list-inline">
-                  <li class="list-inline-item"><a class="text-color" href="https://facebook.com/themefisher"><i class="ti-facebook"></i></a></li>
-                  <li class="list-inline-item"><a class="text-color" href="https://twitter.com/themefisher"><i class="ti-twitter-alt"></i></a></li>
-                  <li class="list-inline-item"><a class="text-color" href="https://github.com/themefisher"><i class="ti-google"></i></a></li>
-                  <li class="list-inline-item"><a class="text-color" href="https://instagram.com/themefisher/"><i class="ti-linkedin"></i></a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- teacher -->
-        <div class="col-lg-4 col-sm-6 mb-5 mb-lg-0">
-          <div class="card border-0 rounded-0 hover-shadow">
-            <img class="card-img-top rounded-0" src="images/teachers/teacher-2.jpg" alt="teacher">
-            <div class="card-body">
-              <a href="teacher-single.html">
-                <h4 class="card-title">Clark Malik</h4>
-              </a>
-              <div class="d-flex justify-content-between">
-                <span>Teacher</span>
-                <ul class="list-inline">
-                  <li class="list-inline-item"><a class="text-color" href="https://facebook.com/themefisher"><i class="ti-facebook"></i></a></li>
-                  <li class="list-inline-item"><a class="text-color" href="https://twitter.com/themefisher"><i class="ti-twitter-alt"></i></a></li>
-                  <li class="list-inline-item"><a class="text-color" href="https://github.com/themefisher"><i class="ti-google"></i></a></li>
-                  <li class="list-inline-item"><a class="text-color" href="https://instagram.com/themefisher/"><i class="ti-linkedin"></i></a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- teacher -->
-        <div class="col-lg-4 col-sm-6 mb-5 mb-lg-0">
-          <div class="card border-0 rounded-0 hover-shadow">
-            <img class="card-img-top rounded-0" src="images/teachers/teacher-3.jpg" alt="teacher">
-            <div class="card-body">
-              <a href="teacher-single.html">
-                <h4 class="card-title">John Doe</h4>
-              </a>
-              <div class="d-flex justify-content-between">
-                <span>Teacher</span>
-                <ul class="list-inline">
-                  <li class="list-inline-item"><a class="text-color" href="https://facebook.com/themefisher"><i class="ti-facebook"></i></a></li>
-                  <li class="list-inline-item"><a class="text-color" href="https://twitter.com/themefisher"><i class="ti-twitter-alt"></i></a></li>
-                  <li class="list-inline-item"><a class="text-color" href="https://github.com/themefisher"><i class="ti-google"></i></a></li>
-                  <li class="list-inline-item"><a class="text-color" href="https://instagram.com/themefisher/"><i class="ti-linkedin"></i></a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- /teachers -->
+
+
 
 <!-- footer -->
 <footer>
