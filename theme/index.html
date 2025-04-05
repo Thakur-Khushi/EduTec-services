@@ -215,9 +215,7 @@
         <div class="d-flex align-items-center section-title justify-content-between">
           <h2 class="mb-0 text-nowrap mr-3">Academic Collaboration</h2>
           <div class="border-top w-100 border-primary d-none d-sm-block"></div>
-          <div>
-            <a href="services.html" class="btn btn-sm btn-outline-primary ml-sm-3 d-none d-sm-block">see all</a>
-          </div>
+          
         </div>
       </div>
     </div>
@@ -226,7 +224,7 @@
       <div class="col-lg-4 col-sm-6 mb-5">
         <div class="card p-0 border-primary rounded-0 hover-shadow">
           <div class="card-img-top d-flex align-items-center justify-content-center" style="height: 200px; background-color: #f8f9fa;">
-            <img src="https://img.icons8.com/color/96/000000/university.png" alt="Subharti University" style="max-height: 150px; max-width: 100%;">
+            <img src="images/University/SVSU.webp" alt="Subharti University" style="max-height: 150px; max-width: 100%;">
           </div>
           <div class="card-body">
             <h4 class="card-title">Subharti University</h4>
@@ -240,7 +238,7 @@
       <div class="col-lg-4 col-sm-6 mb-5">
         <div class="card p-0 border-primary rounded-0 hover-shadow">
           <div class="card-img-top d-flex align-items-center justify-content-center" style="height: 200px; background-color: #f8f9fa;">
-            <img src="https://img.icons8.com/color/96/000000/school-building.png" alt="Suresh Gyan Vihar University" style="max-height: 150px; max-width: 100%;">
+            <img src="images/University/Gyan_Vihar_Logo.jpg" alt="Suresh Gyan Vihar University" style="max-height: 150px; max-width: 100%;">
           </div>
           <div class="card-body">
             <h4 class="card-title">Suresh Gyan Vihar University</h4>
@@ -254,7 +252,7 @@
       <div class="col-lg-4 col-sm-6 mb-5">
         <div class="card p-0 border-primary rounded-0 hover-shadow">
           <div class="card-img-top d-flex align-items-center justify-content-center" style="height: 200px; background-color: #f8f9fa;">
-            <img src="https://img.icons8.com/color/96/000000/online-learning.png" alt="LPU Online" style="max-height: 150px; max-width: 100%;">
+            <img src="images/University/Lovely_Professional_University_logo.png" alt="LPU Online" style="max-height: 150px; max-width: 100%;">
           </div>
           <div class="card-body">
             <h4 class="card-title">LPU Online</h4>
@@ -297,7 +295,9 @@
         </div>
       </div>
     </div>
+    
 
+   
     <div class="row shuffle-wrapper">
       <!-- BBA (Popular) -->
       <div class="col-lg-4 col-md-6 mb-4 shuffle-item" data-groups='["popular"]'>
@@ -400,7 +400,8 @@
 
     <div class="row mt-4">
       <div class="col-12 text-center">
-        <a href="courses.html" class="btn btn-primary">View All Courses</a>
+        <!-- Dynamic View All Button -->
+        <a id="viewAllButton" href="courses.html" class="btn btn-primary mt-3">View All Courses</a>
       </div>
     </div>
   </div>
@@ -589,24 +590,87 @@
 <!-- Initialize Shuffle for Course Filtering -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Shuffle/5.2.3/shuffle.min.js"></script>
 <script>
+
   document.addEventListener('DOMContentLoaded', function() {
-    // Initialize Shuffle for Courses
-    const courseShuffle = new Shuffle(document.querySelector('.section.bg-gray .shuffle-wrapper'), {
-      itemSelector: '.shuffle-item',
-      sizer: null
-    });
 
-    // Set default filter to show Popular Courses
-    courseShuffle.filter('popular');
+      // Initialize Shuffle for Courses
 
-    // Course Filter buttons
-    document.querySelectorAll('input[name="course-filter"]').forEach(input => {
-      input.addEventListener('change', function() {
-        courseShuffle.filter(this.value);
+      const courseShuffle = new Shuffle(document.querySelector('.section.bg-gray .shuffle-wrapper'), {
+
+          itemSelector: '.shuffle-item',
+
+          sizer: null
+
       });
-    });
-  });
-</script>
 
+
+      // Set default filter to show Popular Courses
+
+      courseShuffle.filter('popular');
+
+
+      // Course Filter buttons
+
+      document.querySelectorAll('input[name="course-filter"]').forEach(input => {
+
+          input.addEventListener('change', function() {
+
+              // Remove active class from all buttons
+
+              document.querySelectorAll('.btn-group-toggle .btn').forEach(btn => {
+
+                  btn.classList.remove('active');
+
+              });
+
+              
+
+              // Add active class to the selected button
+
+              this.parentElement.classList.add('active');
+
+
+              // Filter courses based on selected value
+
+              courseShuffle.filter(this.value);
+
+
+              // Change the View All button link based on selection
+
+              const viewAllButton = document.getElementById('viewAllButton');
+
+              switch (this.value) {
+
+                  case 'subharti':
+
+                      viewAllButton.href = 'subharti.html';
+
+                      break;
+
+                  case 'gyanvihar':
+
+                      viewAllButton.href = 'gyanvihar.html';
+
+                      break;
+
+                  case 'lpu':
+
+                      viewAllButton.href = 'lpu.html';
+
+                      break;
+
+                  default:
+
+                      viewAllButton.href = 'courses.html'; // Default link for popular courses
+
+              }
+
+          });
+
+      });
+
+  });
+
+</script>
 </body>
 </html>

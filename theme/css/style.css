@@ -934,3 +934,57 @@ link:focus,
   color: #ffbc3b;
 }
 /*# sourceMappingURL=style.css.map */
+
+/* popular cources*/
+css
+
+/* Button Group Styles */
+
+.btn-group-toggle .btn {
+
+    border: 1px solid #ffbc3b; /* Border color */
+
+    background-color: transparent; /* Default background color */
+
+    color: #ffbc3b; /* Default text color */
+
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+
+}
+
+
+/* Active Button Styles */
+
+.btn-group-toggle .btn.active {
+
+    background-color: #ffbc3b; /* Active background color */
+
+    color: #fff; /* Active text color */
+
+}
+
+
+/* Hover Effect */
+
+.btn-group-toggle .btn:hover {
+
+    background-color: #ffab08; /* Darker yellow on hover */
+
+    color: #fff; /* White text on hover */
+
+}
+
+
+/* Disabled Button Styles */
+
+.btn-group-toggle .btn:disabled {
+
+    background-color: #e9ecef; /* Light gray for disabled */
+
+    color: #6c757d; /* Dark gray text for disabled */
+
+    border-color: #ced4da; /* Border color for disabled */
+
+    cursor: not-allowed; /* Change cursor to indicate disabled */
+
+}
