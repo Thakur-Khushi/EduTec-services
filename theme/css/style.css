@@ -988,3 +988,26 @@ css
     cursor: not-allowed; /* Change cursor to indicate disabled */
 
 }
+/* Show dropdown menu on hover */
+.nav-item.dropdown:hover > .dropdown-menu {
+  display: block;
+  margin-top: 0; /* optional tweak */
+}
+
+/* Nested submenu positioning */
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu > .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -1px;
+  display: none;
+  position: absolute;
+}
+
+/* Show nested submenu on hover */
+.dropdown-submenu:hover > .dropdown-menu {
+  display: block;
+}
