@@ -109,3 +109,100 @@
 	});
 
 })(jQuery);
+
+
+  
+  document.addEventListener('DOMContentLoaded', function() {
+  
+  // Initialize Shuffle for Courses
+  
+  const courseShuffle = new Shuffle(document.querySelector('.section.bg-gray .shuffle-wrapper'), {
+  
+      itemSelector: '.shuffle-item',
+  
+      sizer: null
+  
+  });
+  
+  
+  // Set default filter to show Popular Courses
+  
+  courseShuffle.filter('popular');
+  
+  
+  // Reset the active button state on page load
+  
+  const defaultButton = document.querySelector('input[name="course-filter"][value="popular"]');
+  
+  defaultButton.checked = true; // Set the default radio button to "Popular Courses"
+  
+  defaultButton.parentElement.classList.add('active'); // Add active class to the default button
+  
+  
+  // Change the View All button link based on selection
+  
+  const viewAllButton = document.getElementById('viewAllButton');
+  
+  viewAllButton.href = 'courses.html'; // Default link for popular courses
+  
+  
+  // Course Filter buttons
+  
+  document.querySelectorAll('input[name="course-filter"]').forEach(input => {
+  
+      input.addEventListener('change', function() {
+  
+          // Remove active class from all buttons
+  
+          document.querySelectorAll('.btn-group-toggle .btn').forEach(btn => {
+  
+              btn.classList.remove('active');
+  
+          });
+  
+          
+  
+          // Add active class to the selected button
+  
+          this.parentElement.classList.add('active');
+  
+  
+          // Filter courses based on selected value
+  
+          courseShuffle.filter(this.value);
+  
+  
+          // Change the View All button link based on selection
+  
+          switch (this.value) {
+  
+              case 'subharti':
+  
+                  viewAllButton.href = 'subharti.html';
+  
+                  break;
+  
+              case 'gyanvihar':
+  
+                  viewAllButton.href = 'gyanvihar.html';
+  
+                  break;
+  
+              case 'lpu':
+  
+                  viewAllButton.href = 'lpu.html';
+  
+                  break;
+  
+              default:
+  
+                  viewAllButton.href = 'courses.html'; // Default link for popular courses
+  
+          }
+  
+      });
+  
+  });
+  
+  });
+  
