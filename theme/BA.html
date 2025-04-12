@@ -28,7 +28,36 @@
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
   <link rel="icon" href="images/favicon.png" type="image/x-icon">
   
+  <style>
+  #applicationSection .card {
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  }
   
+  #applicationSection h4 {
+    color: #2c3e50;
+    font-size: 1.25rem;
+  }
+  
+  #applicationSection .form-control {
+    height: 45px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+  }
+  
+  #applicationSection .btn-success {
+    background-color: #28a745;
+    border: none;
+    padding: 12px;
+    font-weight: 500;
+  }
+  
+  #applicationSection .btn-success:hover {
+    background-color: #218838;
+  }
+  </style>
 </head>
 
 <body>
@@ -695,9 +724,31 @@
     <div class="content-block mt-5 text-center">
       <h3 class="mb-4">Ready to Start Your BA Journey?</h3>
       <p class="lead mb-4">Take the next step towards advancing your education in arts and humanities</p>
-      <a href="contact.html" class="btn btn-primary btn-lg mr-3">Request Information</a>
-      <a href="signup.html" class="btn btn-outline-primary btn-lg">Apply Now</a>
+      
+      <div class="d-flex justify-content-center">
+        <a href="contact.html" class="btn btn-primary btn-lg mr-3">Request Information</a>
+        
+        <!-- Apply Now Button - Will show dropdown if logged in, otherwise goes to login -->
+        <button id="applyNowBtn" class="btn btn-outline-primary btn-lg">Apply Now</button>
+      </div>
+      
+      <!-- Hidden Application Section (shown only if logged in) -->
+      <div id="applicationSection" style="display: none; margin-top: 30px; max-width: 500px; margin-left: auto; margin-right: auto;">
+        <div class="card p-4">
+          <h4 class="mb-3">Select Your University</h4>
+          <select id="universitySelect" class="form-control mb-3">
+            <option value="">-- Select University --</option>
+            <option value="Subharti University">Subharti University</option>
+            <option value="Suresh Gyan Vihar University">Suresh Gyan Vihar University</option>
+            <option value="LPU Online">LPU Online</option>
+          </select>
+          <button id="submitApplication" class="btn btn-success btn-block">Submit Application</button>
+        </div>
+      </div>
     </div>
+    
+    
+    
 
 </section>
 <!-- /BA details -->
@@ -825,8 +876,102 @@
   
   <!-- Initialize Shuffle for Course Filtering -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Shuffle/5.2.3/shuffle.min.js"></script>
-  
+  <script>
+  const applyBtn = document.getElementById('applyNowBtn')
+  const submitBtn = document.getElementById('submitApplication')
 
+  applyBtn.addEventListener('click', function () {
+    const token = localStorage.getItem('access_token');
+  
+    if (!token) {
+      // Not logged in
+      window.location.href = 'login.html?redirect=' + encodeURIComponent(window.location.pathname);
+      return;
+    }
+  
+    fetch('http://127.0.0.1:8000/users/me', {
+      method: 'GET',
+      headers: {
+        'Authorization': 'Bearer ' + token
+      }
+    })
+      .then(response => {
+        if (response.status === 200) {
+          // Already logged in — show application section
+          applicationSection.style.display = 'block';
+        } else {
+          // Token invalid or expired
+          localStorage.removeItem('access_token');
+          window.location.href = 'login.html?redirect=' + encodeURIComponent(window.location.pathname);
+        }
+      })
+      .catch(error => {
+        console.error('Token verification error:', error);
+        localStorage.removeItem('access_token');
+        window.location.href = 'login.html?redirect=' + encodeURIComponent(window.location.pathname);
+      });
+  });
+
+  submitBtn.addEventListener('click', async function () {
+    const token = localStorage.getItem('access_token');
+    const university_name = "MIT";
+    const course_name = "Introduction to Computer Science";
+  
+    if (!token) {
+      // Not logged in
+      window.location.href = 'login.html?redirect=' + encodeURIComponent(window.location.pathname);
+      return;
+    }
+  
+    try {
+      const userRes = await fetch('http://127.0.0.1:8000/users/me', {
+        headers: {
+          'Authorization': 'Bearer ' + token
+        }
+      });
+
+      if (!userRes.ok) {
+        throw new Error("User authentication failed.");
+      }
+
+      const user = await userRes.json();
+      const username = user.username;
+
+
+      // 1. Fetch Course ID based on university and course name
+      const idResponse = await fetch(`http://127.0.0.1:8000/courses/id?university=${encodeURIComponent(university_name)}&course_name=${encodeURIComponent(course_name)}`);
+      
+      if (!idResponse.ok) {
+        throw new Error("Course not found.");
+      }
+
+      const { course_id } = await idResponse.json();
+
+      // 2. Send registration request
+      const registerResponse = await fetch('http://127.0.0.1:8000/courses/register', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': 'Bearer ' + token
+        },
+        body: JSON.stringify({
+          username: username,
+          course_id: course_id
+        })
+      });
+
+      if (!registerResponse.ok) {
+        const errData = await registerResponse.json();
+        throw new Error(errData.detail || "Registration failed.");
+      }
+
+      alert("🎉 You have been registered successfully!");
+    } catch (error) {
+      console.error("Registration error:", error);
+      alert("❌ " + error.message);
+    }
+  }); 
+  </script>
 
 </body>
 </html>
