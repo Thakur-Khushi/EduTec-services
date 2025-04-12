@@ -45,7 +45,7 @@
     <div class="container">
       <div class="row no-gutters">
         <div class="col-lg-4 text-center text-lg-left">
-          <a class="text-color mr-3" href="tel:+919876543210"><strong>CALL</strong> +91 98765 43210</a>
+          <a class="text-color mr-3" href="tel:+917042350324"><strong>CALL</strong> +91 7042350324</a>
           <ul class="list-inline d-inline">
             <li class="list-inline-item mx-0"><a class="d-inline-block p-2 text-color" href="https://facebook.com/EduTec services "><i class="ti-facebook"></i></a></li>
             <li class="list-inline-item mx-0"><a class="d-inline-block p-2 text-color" href="https://twitter.com/EduTec services "><i class="ti-twitter-alt"></i></a></li>
@@ -53,12 +53,21 @@
           </ul>
         </div>
         <div class="col-lg-8 text-center text-lg-right">
-          <ul class="list-inline">
-            <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="login.html">login</a></li>
-
-            <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="signup.html">register</a></li>
+          <ul class="list-inline" id="authSection">
+              <li class="list-inline-item" id="usernameDisplay" style="display:none;"></li>
+              <li class="list-inline-item" id="logoutBtn" style="display:none;">
+                <a href="#" class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" onclick="logout()">Logout</a>
+              </li>
+              <li class="list-inline-item" id="loginLink">
+                <a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="login.html">login</a>
+              </li>
+              <li class="list-inline-item" id="registerLink">
+                <a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="signup.html">register</a>
+              </li>
           </ul>
-        </div>
+            
+            
+      </div>
       </div>
     </div>
   </div>
@@ -107,8 +116,8 @@
                     <li><a class="dropdown-item" href="BCA.html">BCA</a></li>
                     <li><a class="dropdown-item" href="MCA.html">MCA</a></li>
                     <li><a class="dropdown-item" href="MBA.html">MBA</a></li>
-                    <li><a class="dropdown-item" href="BA.html">BA</a></li>
-                    <li><a class="dropdown-item" href="MA.html">MA</a></li>
+                    <li><a class="dropdown-item" href="BLIB.html">B.lib</a></li>
+                    <li><a class="dropdown-item" href="MLIB.html">M.Lib</a></li>
                     <li><a class="dropdown-item" href="MA-Education.html">MA in Education</a></li>
                     <li><a class="dropdown-item" href="MAJMC.html">MAJMC</a></li>
                   </ul>
@@ -120,8 +129,8 @@
                     Diploma Courses
                   </a>
                   <ul class="dropdown-menu dropdown-submenu" aria-labelledby="diplomaSubmenu">
-                    <li><a class="dropdown-item" href="#">Online Advance <br>Diploma Courses</a></li>
-                    <li><a class="dropdown-item" href="#">Online Post Graduate<br> Diploma Courses</a></li>
+                    <li><a class="dropdown-item" href="online-advance.html">Online Advance <br>Diploma Courses</a></li>
+                    <li><a class="dropdown-item" href="online-post.html">Online Post Graduate<br> Diploma Courses</a></li>
                     
                   </ul>
                 </li>
@@ -133,12 +142,12 @@
                   </a>
                   <ul class="dropdown-menu dropdown-submenu" aria-labelledby="bachelorSubmenu">
                     <li><a class="dropdown-item" href="BBA.html">BBA</a></li>
-                    <li><a class="dropdown-item" href="#">BCA</a></li>
-                    <li><a class="dropdown-item" href="#">B.Sc</a></li>
-                    <li><a class="dropdown-item" href="#">B.Com</a></li>
-                    <li><a class="dropdown-item" href="#">BA</a></li>
-                    <li><a class="dropdown-item" href="#">BAJMC</a></li>
-                    <li><a class="dropdown-item" href="#">B.LIB</a></li>
+                    <li><a class="dropdown-item" href="BCA.html">BCA</a></li>
+                    <li><a class="dropdown-item" href="BSC.html">B.Sc</a></li>
+                    <li><a class="dropdown-item" href="BCOM.html">B.Com</a></li>
+                    <li><a class="dropdown-item" href="BA.html">BA</a></li>
+                    <li><a class="dropdown-item" href="BAJMC.html">BAJMC</a></li>
+                    <li><a class="dropdown-item" href="BLIB.html">B.LIB</a></li>
                   
                   </ul>
                 </li>
@@ -164,15 +173,14 @@
                     Master Degree
                   </a>
                   <ul class="dropdown-menu dropdown-submenu" aria-labelledby="masterSubmenu">
-                    <li><a class="dropdown-item" href="#">M.Sc</a></li>
-                    <li><a class="dropdown-item" href="#">M.Com</a></li>
-                    <li><a class="dropdown-item" href="#">MA</a></li>
-                    <li><a class="dropdown-item" href="#">MCA</a></li>
-                    <li><a class="dropdown-item" href="#">MCA-LT</a></li>
-                    <li><a class="dropdown-item" href="#">M.Lib</a></li>
-                    <li><a class="dropdown-item" href="#">MBA</a></li>
-                    <li><a class="dropdown-item" href="#">MA Education</a></li>
-                    <li><a class="dropdown-item" href="#">MAJMC</a></li>
+                    <li><a class="dropdown-item" href="MSC.html">M.Sc</a></li>
+                    <li><a class="dropdown-item" href="MCOM.html">M.Com</a></li>
+                    <li><a class="dropdown-item" href="MA.html">MA</a></li>
+                    <li><a class="dropdown-item" href="MCA.html">MCA</a></li>
+                    <li><a class="dropdown-item" href="MLIB.html">M.Lib</a></li>
+                    <li><a class="dropdown-item" href="MBA.html">MBA</a></li>
+                    <li><a class="dropdown-item" href="MA-Education.html">MA Education</a></li>
+                    <li><a class="dropdown-item" href="MAJMC.html">MAJMC</a></li>
                   </ul>
                 </li>
                 
@@ -200,6 +208,7 @@
     </div>
   </div>
 </header>
+<!-- /header-->
 
 <!-- page title -->
 <section class="page-title-section overlay" data-background="images/backgrounds/page-title.jpg">

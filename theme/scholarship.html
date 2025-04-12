@@ -54,26 +54,36 @@
   <!-- preloader end -->
 
 <!-- header -->
+<!-- header and navigation remains the same as before -->
 <header class="fixed-top header">
   <!-- top header -->
   <div class="top-header py-2 bg-white">
     <div class="container">
       <div class="row no-gutters">
         <div class="col-lg-4 text-center text-lg-left">
-          <a class="text-color mr-3" href="tel:+919876543210"><strong>CALL</strong> +91 98765 43210</a>
+          <a class="text-color mr-3" href="tel:+917042350324"><strong>CALL</strong> +91 7042350324</a>
           <ul class="list-inline d-inline">
-            <li class="list-inline-item mx-0"><a class="d-inline-block p-2 text-color" href="https://facebook.com/edutantra"><i class="ti-facebook"></i></a></li>
-            <li class="list-inline-item mx-0"><a class="d-inline-block p-2 text-color" href="https://twitter.com/edutantra"><i class="ti-twitter-alt"></i></a></li>
-            <li class="list-inline-item mx-0"><a class="d-inline-block p-2 text-color" href="https://instagram.com/edutantra"><i class="ti-instagram"></i></a></li>
+            <li class="list-inline-item mx-0"><a class="d-inline-block p-2 text-color" href="https://facebook.com/EduTec services "><i class="ti-facebook"></i></a></li>
+            <li class="list-inline-item mx-0"><a class="d-inline-block p-2 text-color" href="https://twitter.com/EduTec services "><i class="ti-twitter-alt"></i></a></li>
+            <li class="list-inline-item mx-0"><a class="d-inline-block p-2 text-color" href="https://instagram.com/EduTec services "><i class="ti-instagram"></i></a></li>
           </ul>
         </div>
         <div class="col-lg-8 text-center text-lg-right">
-          <ul class="list-inline">
-            <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="login.html">login</a></li>
-
-            <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="signup.html">register</a></li>
+          <ul class="list-inline" id="authSection">
+              <li class="list-inline-item" id="usernameDisplay" style="display:none;"></li>
+              <li class="list-inline-item" id="logoutBtn" style="display:none;">
+                <a href="#" class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" onclick="logout()">Logout</a>
+              </li>
+              <li class="list-inline-item" id="loginLink">
+                <a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="login.html">login</a>
+              </li>
+              <li class="list-inline-item" id="registerLink">
+                <a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="signup.html">register</a>
+              </li>
           </ul>
-        </div>
+            
+            
+      </div>
       </div>
     </div>
   </div>
@@ -81,7 +91,7 @@
   <div class="navigation w-100">
     <div class="container">
       <nav class="navbar navbar-expand-lg navbar-dark p-0">
-        <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="Edutantra logo" width="180"></a>
+        <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="EduTec services  logo" width="180"></a>
         <button class="navbar-toggler rounded-0" type="button" data-toggle="collapse" data-target="#navigation"
           aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -101,9 +111,9 @@
                 UNIVERSITIES
               </a>
               <div class="dropdown-menu" aria-labelledby="universityDropdown">
-                <a class="dropdown-item" href="#">Subharti University</a>
-                <a class="dropdown-item" href="#">Suresh Gyan Vihar</a>
-                <a class="dropdown-item" href="#">LPU Online</a>
+                <a class="dropdown-item" href="subharti.html">Subharti University</a>
+                <a class="dropdown-item" href="gyanvihar.html">Suresh Gyan Vihar</a>
+                <a class="dropdown-item" href="lpu.html">LPU Online</a>
               </div>
             </li>
             
@@ -111,13 +121,87 @@
               <a class="nav-link dropdown-toggle" href="#" id="programsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 PROGRAMS
               </a>
-              <div class="dropdown-menu" aria-labelledby="programsDropdown">
-                <a class="dropdown-item" href="learning-pedagogy.html">Popular Programs</a>
-                <a class="dropdown-item" href="#">Diploma Courses</a>
-                <a class="dropdown-item" href="#">Bachelor Degree</a>
-                <a class="dropdown-item" href="#">MBA Courses</a>
-                <a class="dropdown-item" href="#">Master Degree</a>
-              </div>
+              <ul class="dropdown-menu" aria-labelledby="programsDropdown">
+                
+                <li class="dropdown-item dropdown dropright">
+                  <a class="dropdown-toggle" href="#" id="popularProgramsSubmenu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Popular Programs
+                  </a>
+                  <ul class="dropdown-menu dropdown-submenu" aria-labelledby="popularProgramsSubmenu">
+                    <li><a class="dropdown-item" href="BBA.html">BBA</a></li>
+                    <li><a class="dropdown-item" href="BCA.html">BCA</a></li>
+                    <li><a class="dropdown-item" href="MCA.html">MCA</a></li>
+                    <li><a class="dropdown-item" href="MBA.html">MBA</a></li>
+                    <li><a class="dropdown-item" href="BLIB.html">B.lib</a></li>
+                    <li><a class="dropdown-item" href="MLIB.html">M.Lib</a></li>
+                    <li><a class="dropdown-item" href="MA-Education.html">MA in Education</a></li>
+                    <li><a class="dropdown-item" href="MAJMC.html">MAJMC</a></li>
+                  </ul>
+                </li>
+                
+                <!-- Diploma Courses (Nested) -->
+                <li class="dropdown-item dropdown dropright">
+                  <a class="dropdown-toggle" href="#" id="diplomaSubmenu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Diploma Courses
+                  </a>
+                  <ul class="dropdown-menu dropdown-submenu" aria-labelledby="diplomaSubmenu">
+                    <li><a class="dropdown-item" href="online-advance.html">Online Advance <br>Diploma Courses</a></li>
+                    <li><a class="dropdown-item" href="online-post.html">Online Post Graduate<br> Diploma Courses</a></li>
+                    
+                  </ul>
+                </li>
+                
+                <!-- Bachelor Degree (Nested) -->
+                <li class="dropdown-item dropdown dropright">
+                  <a class="dropdown-toggle" href="#" id="bachelorSubmenu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Bachelor Degree
+                  </a>
+                  <ul class="dropdown-menu dropdown-submenu" aria-labelledby="bachelorSubmenu">
+                    <li><a class="dropdown-item" href="BBA.html">BBA</a></li>
+                    <li><a class="dropdown-item" href="BCA.html">BCA</a></li>
+                    <li><a class="dropdown-item" href="BSC.html">B.Sc</a></li>
+                    <li><a class="dropdown-item" href="BCOM.html">B.Com</a></li>
+                    <li><a class="dropdown-item" href="BA.html">BA</a></li>
+                    <li><a class="dropdown-item" href="BAJMC.html">BAJMC</a></li>
+                    <li><a class="dropdown-item" href="BLIB.html">B.LIB</a></li>
+                  
+                  </ul>
+                </li>
+                
+                <!-- MBA Courses (Nested) -->
+                <li class="dropdown-item dropdown dropright">
+                  <a class="dropdown-toggle" href="#" id="mbaSubmenu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    MBA Courses
+                  </a>
+                  <ul class="dropdown-menu dropdown-submenu" aria-labelledby="mbaSubmenu">
+                    <li><a class="dropdown-item" href="#">Marketing Management</a></li>
+                    <li><a class="dropdown-item" href="#">Finance Management</a></li>
+                    <li><a class="dropdown-item" href="#">Human Resource Management</a></li>
+                    <li><a class="dropdown-item" href="#">International Marketing</a></li>
+                    <li><a class="dropdown-item" href="#">Branding & Advertising</a></li>
+                    <li><a class="dropdown-item" href="#">view All</a></li>
+                  </ul>
+                </li>
+                
+                <!-- Master Degree (Nested) -->
+                <li class="dropdown-item dropdown dropright">
+                  <a class="dropdown-toggle" href="#" id="masterSubmenu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Master Degree
+                  </a>
+                  <ul class="dropdown-menu dropdown-submenu" aria-labelledby="masterSubmenu">
+                    <li><a class="dropdown-item" href="MSC.html">M.Sc</a></li>
+                    <li><a class="dropdown-item" href="MCOM.html">M.Com</a></li>
+                    <li><a class="dropdown-item" href="MA.html">MA</a></li>
+                    <li><a class="dropdown-item" href="MCA.html">MCA</a></li>
+                    <li><a class="dropdown-item" href="MLIB.html">M.Lib</a></li>
+                    <li><a class="dropdown-item" href="MBA.html">MBA</a></li>
+                    <li><a class="dropdown-item" href="MA-Education.html">MA Education</a></li>
+                    <li><a class="dropdown-item" href="MAJMC.html">MAJMC</a></li>
+                  </ul>
+                </li>
+                
+                
+              </ul>
             </li>
             
             <li class="nav-item dropdown">
@@ -140,7 +224,7 @@
     </div>
   </div>
 </header>
-<!-- /header -->
+<!-- /header-->
 <!-- Modal -->
 <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">

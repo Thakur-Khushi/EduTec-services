@@ -206,3 +206,54 @@
   
   });
   
+
+
+  document.addEventListener('DOMContentLoaded', function () {
+	const token = localStorage.getItem('access_token');
+
+	if (!token) {
+	  // User not logged in
+	  document.getElementById('usernameDisplay').textContent = 'Guest';
+	  return;
+	}
+
+	fetch('http://127.0.0.1:8000/users/me', {
+	  method: 'GET',
+	  headers: {
+		'Authorization': 'Bearer ' + token
+	  }
+	})
+	.then(response => {
+	  if (!response.ok) {
+		throw new Error('Failed to fetch user data');
+	  }
+	  return response.json();
+	})
+	.then(data => {
+	  // Hide login/register links
+	  const loginLink = document.getElementById('loginLink');
+	  const registerLink = document.getElementById('registerLink');
+	  if (loginLink) loginLink.style.display = 'none';
+	  if (registerLink) registerLink.style.display = 'none';
+
+	  // Show username and logout
+	  const usernameDisplay = document.getElementById('usernameDisplay');
+	  const logoutBtn = document.getElementById('logoutBtn');
+	  if (usernameDisplay) {
+		usernameDisplay.style.display = 'inline-block';
+		usernameDisplay.innerHTML = `<span class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block">Welcome, ${data.username}</span>`;
+	  }
+	  if (logoutBtn) {
+		logoutBtn.style.display = 'inline-block';
+	  }
+	})
+	.catch(error => {
+	  console.error('Error fetching user data:', error);
+	  document.getElementById('usernameDisplay').textContent = 'Guest';
+	});
+  });
+
+  function logout() {
+	localStorage.removeItem('access_token');
+	window.location.reload();
+  }
