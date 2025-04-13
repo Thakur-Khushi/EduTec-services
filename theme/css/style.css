@@ -1152,4 +1152,194 @@ css
         padding: 0.5rem;
       }
     }
- 
+    #applicationSection .card {
+      background: #f8f9fa;
+      border: 1px solid #dee2e6;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+    
+    #applicationSection h4 {
+      color: #2c3e50;
+      font-size: 1.25rem;
+    }
+    
+    #applicationSection .form-control {
+      height: 45px;
+      border-radius: 4px;
+      margin-bottom: 20px;
+    }
+    
+    #applicationSection .btn-success {
+      background-color: #28a745;
+      border: none;
+      padding: 12px;
+      font-weight: 500;
+    }
+    
+    #applicationSection .btn-success:hover {
+      background-color: #218838;
+    }
+
+
+    .university-header {
+      padding: 120px 0 60px;
+      background: linear-gradient(135deg, #1a1a37 0%, #2d2d5a 100%);
+      color: white;
+    }
+    
+    .university-header h1 {
+      color: white;
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+    
+    .university-content {
+      padding: 60px 0;
+      background: #f8f8f8;
+    }
+    
+    .content-card {
+      background: white;
+      border-radius: 8px;
+      padding: 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      transition: all 0.3s ease;
+    }
+    
+    .content-card:hover {
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      transform: translateY(-5px);
+    }
+    
+    .section-title {
+      color: #1a1a37;
+      position: relative;
+      padding-bottom: 15px;
+      margin-bottom: 25px;
+    }
+    
+    .section-title:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 60px;
+      height: 3px;
+      background: #ffbc3b;
+    }
+    
+    .sub-section-title {
+      color: #2d2d5a;
+      margin-top: 30px;
+      margin-bottom: 15px;
+      font-size: 22px;
+    }
+    
+    /* Table Styles */
+    .university-table {
+      width: 100%;
+      margin: 20px 0;
+      border-collapse: collapse;
+    }
+    
+    .university-table th {
+      background-color: #1a1a37;
+      color: white;
+      padding: 12px 15px;
+      text-align: left;
+    }
+    
+    .university-table td {
+      padding: 10px 15px;
+      border-bottom: 1px solid #eaeaea;
+    }
+    
+    .university-table tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+    
+    .university-table tr:hover {
+      background-color: #f1f1f1;
+    }
+    
+    /* List Styles */
+    .feature-list {
+      columns: 2;
+      column-gap: 30px;
+    }
+    
+    .feature-list li {
+      margin-bottom: 10px;
+      position: relative;
+      padding-left: 25px;
+      break-inside: avoid;
+    }
+    
+    .feature-list li:before {
+      content: '\e64c';
+      font-family: 'themify';
+      position: absolute;
+      left: 0;
+      color: #ffbc3b;
+    }
+    
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+      .feature-list {
+        columns: 1;
+      }
+      
+      .university-header {
+        padding: 100px 0 40px;
+      }
+      
+      .university-header h1 {
+        font-size: 32px;
+      }
+      
+      .content-card {
+        padding: 20px;
+      }
+    }
+    
+    /* Note Box */
+    .note-box {
+      background: #fff9e6;
+      border-left: 4px solid #ffbc3b;
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 14px;
+    }
+    
+    /* Contact Info Box */
+    .contact-box {
+      background: #f5f7fa;
+      border-radius: 8px;
+      padding: 25px;
+      margin-top: 30px;
+    }
+    
+    .contact-box h4 {
+      color: #1a1a37;
+      margin-bottom: 15px;
+    }
+    
+    .contact-box p {
+      margin-bottom: 5px;
+    }
+    
+    /* Highlights Box */
+    .highlight-box {
+      background: #f0f7ff;
+      border-left: 4px solid #0066cc;
+      padding: 20px;
+      margin: 25px 0;
+    }
+    
+    /* Program Specializations */
+    .specialization-list {
+      columns: 2;
+      column-gap: 30px;
+    }
