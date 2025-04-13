@@ -257,3 +257,140 @@
 	localStorage.removeItem('access_token');
 	window.location.reload();
   }
+
+  const applyBtn = document.getElementById('applyNowBtn')
+  const submitBtn = document.getElementById('submitApplication')
+  const course_name = document.getElementById('courseName').value
+
+  // Function to load universities for BA course
+  async function loadUniversities(course) {
+    const universitySelect = document.getElementById('universitySelect');;
+    try {
+      const encodedCourseName = encodeURIComponent(course);
+      // Show loading state
+      universitySelect.innerHTML = '<option value="">Loading universities...</option>';
+      
+      // Fetch universities offering BA courses
+      const response = await fetch(`http://localhost:8000/universities?course_name=${encodedCourseName}`);
+      
+      if (!response.ok) {
+        throw new Error('Failed to load universities');
+      }
+      
+      const universities = await response.json();
+      
+      // Clear and repopulate the select box
+      universitySelect.innerHTML = '';
+      
+      // Add default option
+      const defaultOption = document.createElement('option');
+      defaultOption.value = '';
+      defaultOption.textContent = '-- Select University --';
+      universitySelect.appendChild(defaultOption);
+      
+      // Add university options
+      universities.forEach(university => {
+        const option = document.createElement('option');
+        option.value = university; // Using code like SVSU, SGVU, LPU
+        option.textContent = university;
+        universitySelect.appendChild(option);
+      });
+      
+    } catch (error) {
+      console.error('Error loading universities:', error);
+      universitySelect.innerHTML = '<option value="">Error loading universities</option>';
+    }
+  }
+
+  applyBtn.addEventListener('click', function () {
+    const token = localStorage.getItem('access_token');
+    loadUniversities(course_name)
+  
+    if (!token) {
+      // Not logged in
+      window.location.href = 'login.html?redirect=' + encodeURIComponent(window.location.pathname);
+      return;
+    }
+  
+    fetch('http://127.0.0.1:8000/users/me', {
+      method: 'GET',
+      headers: {
+        'Authorization': 'Bearer ' + token
+      }
+    })
+      .then(response => {
+        if (response.status === 200) {
+          // Already logged in — show application section
+          applicationSection.style.display = 'block';
+        } else {
+          // Token invalid or expired
+          localStorage.removeItem('access_token');
+          window.location.href = 'login.html?redirect=' + encodeURIComponent(window.location.pathname);
+        }
+      })
+      .catch(error => {
+        console.error('Token verification error:', error);
+        localStorage.removeItem('access_token');
+        window.location.href = 'login.html?redirect=' + encodeURIComponent(window.location.pathname);
+      });
+  });
+
+  submitBtn.addEventListener('click', async function () {
+    const token = localStorage.getItem('access_token');
+    
+    const university_name = document.getElementById('universitySelect').value;
+
+    if (!token) {
+      // Not logged in
+      window.location.href = 'login.html?redirect=' + encodeURIComponent(window.location.pathname);
+      return;
+    }
+  
+    try {
+      const userRes = await fetch('http://127.0.0.1:8000/users/me', {
+        headers: {
+          'Authorization': 'Bearer ' + token
+        }
+      });
+
+      if (!userRes.ok) {
+        throw new Error("User authentication failed.");
+      }
+
+      const user = await userRes.json();
+      const username = user.username;
+
+
+      // 1. Fetch Course ID based on university and course name
+      const idResponse = await fetch(`http://127.0.0.1:8000/courses/id?university=${encodeURIComponent(university_name)}&course_name=${encodeURIComponent(course_name)}`);
+      
+      if (!idResponse.ok) {
+        throw new Error("Course not found.");
+      }
+
+      const { course_id } = await idResponse.json();
+
+      // 2. Send registration request
+      const registerResponse = await fetch('http://127.0.0.1:8000/courses/register', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': 'Bearer ' + token
+        },
+        body: JSON.stringify({
+          username: username,
+          course_id: course_id
+        })
+      });
+
+      if (!registerResponse.ok) {
+        const errData = await registerResponse.json();
+        throw new Error(errData.detail || "Registration failed.");
+      }
+
+      alert("🎉 You have been registered successfully!");
+    } catch (error) {
+      console.error("Registration error:", error);
+      alert("❌ " + error.message);
+    }
+  }); 
