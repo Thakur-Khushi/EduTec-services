@@ -210,6 +210,7 @@
 
 <!-- page title -->
 <section class="page-title-section overlay" data-background="images/backgrounds/page-title.jpg">
+  <input id="courseName" value="MLIB" hidden="true">
   <div class="container">
     <div class="row">
       <div class="col-md-8">
@@ -552,10 +553,25 @@
     
     <!-- CTA Section -->
     <div class="content-block mt-5 text-center">
-      <h3 class="mb-4">Ready to Start Your MLib Journey?</h3>
-      <p class="lead mb-4">Take the next step towards advancing your career in library science</p>
-      <a href="contact.html" class="btn btn-primary btn-lg mr-3">Request Information</a>
-      <a href="signup.html" class="btn btn-outline-primary btn-lg">Apply Now</a>
+      <h3 class="mb-4">Ready to Start Your BA Journey?</h3>
+      <p class="lead mb-4">Take the next step towards advancing your education in arts and humanities</p>
+      
+      <div class="d-flex justify-content-center">
+        <a href="contact.html" class="btn btn-primary btn-lg mr-3">Request Information</a>
+        
+        <!-- Apply Now Button - Will show dropdown if logged in, otherwise goes to login -->
+        <button id="applyNowBtn" class="btn btn-outline-primary btn-lg">Apply Now</button>
+      </div>
+      
+      <!-- Hidden Application Section (shown only if logged in) -->
+      <div id="applicationSection" style="display: none; margin-top: 30px; max-width: 500px; margin-left: auto; margin-right: auto;">
+        <div class="card p-4">
+          <h4 class="mb-3">Select Your University</h4>
+          <!-- imp to add -->
+          <select id="universitySelect" class="form-control mb-3"></select>
+          <button id="submitApplication" class="btn btn-success btn-block">Submit Application</button>
+        </div>
+      </div>
     </div>
   </div>
 </section>
