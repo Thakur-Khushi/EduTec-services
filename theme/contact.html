@@ -409,15 +409,15 @@
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 <script>
   // Initialize EmailJS (Replace with your actual Public Key)
-  emailjs.init('XJbDPI7VCmH1jc49H');
+  emailjs.init('2D7Nk16nCdtlGD2Hk');
 
   // Handle form submission
   document.getElementById('contact-form').addEventListener('submit', function(e) {
     e.preventDefault();
     
     emailjs.sendForm(
-      'service_j8cfh3t',   // From EmailJS Dashboard → Email Services
-      'template_d2g4xun',  // From EmailJS Dashboard → Email Templates
+      'service_ndc6zsl',   // From EmailJS Dashboard → Email Services
+      'template_e2gpefc',  // From EmailJS Dashboard → Email Templates
       this                 // 'this' refers to the form
     ).then(
       () => {
