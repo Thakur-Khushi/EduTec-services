@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Basic Page Needs -->
+  <meta charset="utf-8">
+  <title>Online M.Sc (Master of Science) | EduTec Services</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Enroll in our Online M.Sc (Master of Science) programs. UGC-recognized degrees in various specializations like Data Science, Mathematics, Environmental Science, and more.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
+  <!-- slick slider -->
+  <link rel="stylesheet" href="plugins/slick/slick.css">
+  <!-- themefy-icon -->
+  <link rel="stylesheet" href="plugins/themify-icons/themify-icons.css">
+  <!-- animation css -->
+  <link rel="stylesheet" href="plugins/animate/animate.css">
+  <!-- aos -->
+  <link rel="stylesheet" href="plugins/aos/aos.css">
+  <!-- venobox popup -->
+  <link rel="stylesheet" href="plugins/venobox/venobox.css">
+
+  <!-- Main Stylesheet -->
+  <link href="css/style.css" rel="stylesheet">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+  <link rel="icon" href="images/favicon.png" type="image/x-icon">
+  
+ 
+</head>
+
+<body>
+  <!-- preloader start -->
+  <div class="preloader">
+    <img src="images/preloader.gif" alt="preloader">
+  </div>
+  <!-- preloader end -->
+
+<!-- header remains the same as before -->
+<header class="fixed-top header">
+  <!-- top header -->
+  <div class="top-header py-2 bg-white">
+    <div class="container">
+      <div class="row no-gutters">
+        <div class="col-lg-4 text-center text-lg-left">
+          <a class="text-color mr-3" href="tel:+919220945806"><strong>CALL</strong> +919220945806</a>
+          <ul class="list-inline d-inline">
+            <li class="list-inline-item mx-0"><a class="d-inline-block p-2 text-color" href="https://facebook.com/EduTec services "><i class="ti-facebook"></i></a></li>
+            <li class="list-inline-item mx-0"><a class="d-inline-block p-2 text-color" href="https://twitter.com/EduTec services "><i class="ti-twitter-alt"></i></a></li>
+            <li class="list-inline-item mx-0"><a class="d-inline-block p-2 text-color" href="https://instagram.com/EduTec services "><i class="ti-instagram"></i></a></li>
+          </ul>
+        </div>
+        <div class="col-lg-8 text-center text-lg-right">
+          <ul class="list-inline" id="authSection">
+              <li class="list-inline-item" id="usernameDisplay" style="display:none;"></li>
+              <li class="list-inline-item" id="logoutBtn" style="display:none;">
+                <a href="#" class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" onclick="logout()">Logout</a>
+              </li>
+              <li class="list-inline-item" id="loginLink">
+                <a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="login.html">login</a>
+              </li>
+              <li class="list-inline-item" id="registerLink">
+                <a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="signup.html">register</a>
+              </li>
+          </ul>
+            
+            
+      </div>
+      </div>
+    </div>
+  </div>
+  <!-- navbar -->
+  <div class="navigation w-100">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-dark p-0">
+        <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="EduTec services  logo" width="180"></a>
+        <button class="navbar-toggler rounded-0" type="button" data-toggle="collapse" data-target="#navigation"
+          aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navigation">
+          <ul class="navbar-nav ml-auto text-center">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="research.html" id="universityDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                UNIVERSITIES
+              </a>
+              <div class="dropdown-menu" aria-labelledby="universityDropdown">
+                <a class="dropdown-item" href="subharti.html">Subharti University</a>
+                <a class="dropdown-item" href="gyanvihar.html">Suresh Gyan Vihar</a>
+                <a class="dropdown-item" href="lpu.html">LPU Online</a>
+              </div>
+            </li>
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="programsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                PROGRAMS
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="programsDropdown">
+                
+                <li class="dropdown-item dropdown dropright">
+                  <a class="dropdown-toggle" href="#" id="popularProgramsSubmenu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Popular Programs
+                  </a>
+                  <ul class="dropdown-menu dropdown-submenu" aria-labelledby="popularProgramsSubmenu">
+                    <li><a class="dropdown-item" href="BBA.html">BBA</a></li>
+                    <li><a class="dropdown-item" href="BCA.html">BCA</a></li>
+                    <li><a class="dropdown-item" href="MCA.html">MCA</a></li>
+                    <li><a class="dropdown-item" href="MBA.html">MBA</a></li>
+                    <li><a class="dropdown-item" href="BLIB.html">B.lib</a></li>
+                    <li><a class="dropdown-item" href="MLIB.html">M.Lib</a></li>
+                    <li><a class="dropdown-item" href="MA-Education.html">MA in Education</a></li>
+                    <li><a class="dropdown-item" href="MAJMC.html">MAJMC</a></li>
+                  </ul>
+                </li>
+                
+                <!-- Diploma Courses (Nested) -->
+                <li class="dropdown-item dropdown dropright">
+                  <a class="dropdown-toggle" href="#" id="diplomaSubmenu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Diploma Courses
+                  </a>
+                  <ul class="dropdown-menu dropdown-submenu" aria-labelledby="diplomaSubmenu">
+                    <li><a class="dropdown-item" href="online-advance.html">Online Advance <br>Diploma Courses</a></li>
+                    <li><a class="dropdown-item" href="online-post.html">Online Post Graduate<br> Diploma Courses</a></li>
+                    
+                  </ul>
+                </li>
+                
+                <!-- Bachelor Degree (Nested) -->
+                <li class="dropdown-item dropdown dropright">
+                  <a class="dropdown-toggle" href="#" id="bachelorSubmenu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Bachelor Degree
+                  </a>
+                  <ul class="dropdown-menu dropdown-submenu" aria-labelledby="bachelorSubmenu">
+                    <li><a class="dropdown-item" href="BBA.html">BBA</a></li>
+                    <li><a class="dropdown-item" href="BCA.html">BCA</a></li>
+                    <li><a class="dropdown-item" href="BSC.html">B.Sc</a></li>
+                    <li><a class="dropdown-item" href="BCOM.html">B.Com</a></li>
+                    <li><a class="dropdown-item" href="BA.html">BA</a></li>
+                    <li><a class="dropdown-item" href="BAJMC.html">BAJMC</a></li>
+                    <li><a class="dropdown-item" href="BLIB.html">B.LIB</a></li>
+                  
+                  </ul>
+                </li>
+                
+                <!-- MBA Courses (Nested) -->
+                <li class="dropdown-item dropdown dropright">
+                  <a class="dropdown-toggle" href="#" id="mbaSubmenu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    MBA Courses
+                  </a>
+                  <ul class="dropdown-menu dropdown-submenu" aria-labelledby="mbaSubmenu">
+                    <li><a class="dropdown-item" href="Marketing-Management.html">Marketing Management</a></li>
+                    <li><a class="dropdown-item" href="Finance-Management.html">Finance Management</a></li>
+                    <li><a class="dropdown-item" href="Human-Resource-Management.html">Human Resource Management</a></li>
+                    <li><a class="dropdown-item" href="International-Marketing.html">International Marketing</a></li>
+                    <li><a class="dropdown-item" href="Branding.html">Branding & Advertising</a></li>
+                    <li><a class="dropdown-item" href="All.html">view All</a></li>
+                  </ul>
+                </li>
+                
+                <!-- Master Degree (Nested) -->
+                <li class="dropdown-item dropdown dropright">
+                  <a class="dropdown-toggle" href="#" id="masterSubmenu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Master Degree
+                  </a>
+                  <ul class="dropdown-menu dropdown-submenu" aria-labelledby="masterSubmenu">
+                    <li><a class="dropdown-item" href="MSC.html">M.Sc</a></li>
+                    <li><a class="dropdown-item" href="MCOM.html">M.Com</a></li>
+                    <li><a class="dropdown-item" href="MA.html">MA</a></li>
+                    <li><a class="dropdown-item" href="MCA.html">MCA</a></li>
+                    <li><a class="dropdown-item" href="MLIB.html">M.Lib</a></li>
+                    <li><a class="dropdown-item" href="MBA.html">MBA</a></li>
+                    <li><a class="dropdown-item" href="MA-Education.html">MA Education</a></li>
+                    <li><a class="dropdown-item" href="MAJMC.html">MAJMC</a></li>
+                  </ul>
+                </li>
+                
+                
+              </ul>
+            </li>
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="student-corner.html" id="studentDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                STUDENT CORNER
+              </a>
+              <div class="dropdown-menu" aria-labelledby="studentDropdown">
+                <a class="dropdown-item" href="Addmision-procedure.html">Admission Procedure</a>
+                <a class="dropdown-item" href="Information.html">Important Information</a>
+                <a class="dropdown-item" href="learing.html">Learning Pedagogy</a>
+              </div>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">CONTACT</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>
+<!-- /header-->
+
+<!-- page title -->
+<section class="page-title-section overlay" data-background="images/backgrounds/page-title.jpg">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <ul class="list-inline custom-breadcrumb">
+          <li class="list-inline-item"><a class="h2 text-primary font-secondary" href="programs.html">Our Programs</a></li>
+          <li class="list-inline-item text-white h3 font-secondary nasted">Online M.Sc</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /page title -->
+
+<!-- Online M.Sc details -->
+<section class="section">
+    <!-- Imp to add -->
+    <input id="courseName" value="MSc" hidden="true"> 
+    <div class="container">
+      <!-- Program Overview -->
+      <div class="content-block content-block-primary">
+        <div class="row">
+          <div class="col-lg-6">
+            <h2 class="mb-4">Online M.Sc (Master of Science)</h2>
+            <p>The Online M.Sc (Master of Science) is a 2-year postgraduate program designed to provide students with advanced theoretical knowledge and practical skills in various scientific disciplines. This program caters to individuals aiming to deepen their understanding and expertise in fields such as Data Science, Mathematics, Environmental Science, Chemistry, Physics, and more. The flexible online format allows learners to pursue higher education while managing other commitments, leading to a UGC-recognized degree from NAAC accredited universities.</p>
+            <ul class="list-styled">
+              <li>UGC-recognized M.Sc degree from reputed universities</li>
+              <li>Wide range of specializations to choose from</li>
+              <li>Industry-aligned curriculum with focus on practical application and research</li>
+              <li>Flexible online learning with access to live/recorded lectures and digital resources</li>
+              <li>Opportunity for career advancement and research-oriented roles</li>
+            </ul>
+          </div>
+          <div class="col-lg-6">
+            <img src="images/courses/msc-program.jpg" alt="Online M.Sc Program" class="img-fluid rounded">
+          </div>
+        </div>
+      </div>
+      
+      <!-- Key Features in Card Layout -->
+      <div class="row mt-4">
+        <div class="col-md-6">
+          <div class="feature-box">
+            <i class="ti-medall feature-icon"></i>
+            <h4>Program Highlights</h4>
+            <ul class="list-styled">
+              <li>2-year postgraduate degree (4 Semesters)</li>
+              <li>UGC Entitled & NAAC Accredited Universities</li>
+              <li>Specializations like Data Science, Mathematics, Environmental Science, etc.</li>
+              <li>Interactive online learning platform with e-content</li>
+              <li>Live and recorded lectures for flexible learning</li>
+              <li>Practical exposure through virtual labs and projects</li>
+              <li>Dedicated student support and career services</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="feature-box">
+            <i class="ti-briefcase feature-icon"></i>
+            <h4>Career Opportunities</h4>
+            <ul class="list-styled">
+              <li>Research Scientist / Analyst</li>
+              <li>Data Scientist / Data Analyst</li>
+              <li>Environmental Consultant / Scientist</li>
+              <li>Chemist / Physicist</li>
+              <li>Statistician / Mathematician</li>
+              <li>Quality Control Manager</li>
+              <li>Academician / Lecturer</li>
+              <li>Scientific Writer / Editor</li>
+              <li>Roles in R&D, IT, Healthcare, and Government sectors</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Curriculum -->
+      <div class="content-block content-block-secondary mt-4">
+        <h3 class="mb-4">Program Curriculum (Illustrative)</h3>
+        <p>The Online M.Sc curriculum is designed to provide specialized knowledge. It typically includes core subjects, elective subjects, practical labs (virtual/simulated), and a research project or dissertation. The specific subjects vary greatly depending on the chosen specialization.</p>
+        
+        <h5 class="mt-4">Popular Specializations Offered:</h5>
+        <ul class="list-styled">
+            <li>M.Sc in Data Science</li>
+            <li>M.Sc in Mathematics</li>
+            <li>M.Sc in Environmental Science</li>
+            <li>M.Sc in Chemistry</li>
+            <li>M.Sc in Physics</li>
+            <li>M.Sc in IT / Computer Science</li>
+        </ul>
+
+        <p class="mt-3">Below is a general semester-wise structure. Actual subjects will differ based on the specialization.</p>
+        <div class="row mt-4">
+          <div class="col-md-6">
+            <div class="card mb-4">
+              <div class="card-header bg-primary text-white">
+                <h5 class="mb-0">Semester 1 & 2 (Foundation & Core)</h5>
+              </div>
+              <div class="card-body">
+                <h6>Semester 1 (Example Subjects)</h6>
+                <ul class="list-styled">
+                  <li>Advanced concepts in [Core Field 1 e.g., Calculus for Maths]</li>
+                  <li>Research Methodology & Scientific Writing</li>
+                  <li>Statistical Methods / Computational Techniques</li>
+                  <li>[Core Field 2 e.g., Classical Mechanics for Physics]</li>
+                </ul>
+                <h6 class="mt-3">Semester 2 (Example Subjects)</h6>
+                <ul class="list-styled">
+                  <li>[Core Field 3 e.g., Organic Chemistry for Chemistry]</li>
+                  <li>Advanced concepts in [Core Field 4 e.g., Algorithms for Data Science]</li>
+                  <li>Laboratory/Practical Work I (Virtual/Simulated)</li>
+                  <li>Elective I (Specialization specific)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card mb-4">
+              <div class="card-header bg-primary text-white">
+                <h5 class="mb-0">Semester 3 & 4 (Specialization & Research)</h5>
+              </div>
+              <div class="card-body">
+                <h6>Semester 3 (Example Subjects)</h6>
+                <ul class="list-styled">
+                  <li>Advanced Specialization Subject I</li>
+                  <li>Advanced Specialization Subject II</li>
+                  <li>Laboratory/Practical Work II (Virtual/Simulated)</li>
+                  <li>Elective II (Specialization specific)</li>
+                  <li>Research Project/Dissertation (Initiation)</li>
+                </ul>
+                <h6 class="mt-3">Semester 4 (Example Subjects)</h6>
+                <ul class="list-styled">
+                  <li>Advanced Specialization Subject III</li>
+                  <li>Recent Advances in [Specialization Field]</li>
+                  <li>Seminar/Presentation Skills</li>
+                  <li>Dissertation / Major Research Project Completion</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="mt-2"><small><em>Note: The curriculum is highly dependent on the chosen M.Sc specialization and university.</em></small></p>
+      </div>
+      
+      <!-- Key M.Sc Focus Areas -->
+      <div class="content-block mt-4">
+        <h3 class="mb-4">Key M.Sc Focus Areas</h3>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card border-0 mb-4">
+              <div class="card-body text-center">
+                <i class="ti-ruler-pencil feature-icon-lg text-primary mb-3"></i>
+                <h5>Advanced Specialization</h5>
+                <p>In-depth knowledge in a chosen scientific field.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card border-0 mb-4">
+              <div class="card-body text-center">
+                <i class="ti-search feature-icon-lg text-primary mb-3"></i>
+                <h5>Research Skills</h5>
+                <p>Methodology, data collection, analysis, and interpretation.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card border-0 mb-4">
+              <div class="card-body text-center">
+                <i class="ti-pulse feature-icon-lg text-primary mb-3"></i>
+                <h5>Analytical Thinking</h5>
+                <p>Critical evaluation and problem-solving abilities.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card border-0 mb-4">
+              <div class="card-body text-center">
+                <i class="ti-desktop feature-icon-lg text-primary mb-3"></i>
+                <h5>Practical Application</h5>
+                <p>Virtual labs, simulations, and project-based learning.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card border-0 mb-4">
+              <div class="card-body text-center">
+                <i class="ti-bar-chart-alt feature-icon-lg text-primary mb-3"></i>
+                <h5>Data Analysis</h5>
+                <p>Using tools and techniques for scientific data interpretation.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card border-0 mb-4">
+              <div class="card-body text-center">
+                <i class="ti-write feature-icon-lg text-primary mb-3"></i>
+                <h5>Scientific Communication</h5>
+                <p>Presenting research findings effectively.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Admission Requirements -->
+      <div class="row mt-4">
+        <div class="col-md-6">
+          <div class="content-block">
+            <h4 class="mb-4">Eligibility Criteria</h4>
+            <ul class="list-styled">
+              <li>Bachelor's degree (B.Sc. or equivalent) in a relevant science discipline from a recognized university.</li>
+              <li>Minimum 50% aggregate marks in graduation (may vary by university and specialization, 45% for reserved categories).</li>
+              <li>Some specializations may have specific subject prerequisites at the undergraduate level (e.g., Mathematics for M.Sc. Data Science or M.Sc. Mathematics).</li>
+              <li>No age limit for admission.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="content-block">
+            <h4 class="mb-4">Documents Required</h4>
+            <ul class="list-styled">
+              <li>10th, 12th, and Graduation (B.Sc. or equivalent) Mark sheets and Certificates.</li>
+              <li>Transfer Certificate / Migration Certificate (if applicable).</li>
+              <li>Identity Proof (Aadhaar Card/Passport/Voter ID).</li>
+              <li>Passport size photographs.</li>
+              <li>Caste certificate (if applicable for relaxations).</li>
+              <li>Entrance exam scorecard (if applicable for a specific university/program).</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Fee Structure with Comparison Table -->
+      <div class="content-block mt-4">
+        <h3 class="mb-4">Fee Structure Comparison (Indicative)</h3>
+        <p>The total program fee for Online M.Sc programs varies based on the university and specialization:</p>
+        
+        <div class="table-responsive mt-4">
+          <table class="table table-custom">
+            <thead>
+              <tr>
+                <th>University</th>
+                
+                <th>Average Fees</th>
+                <th> Eligibility</th>
+                <th>Admission Process</th>
+              </tr>
+            </thead>
+            <tbody>
+              
+              <tr>
+                <td>LPU Online</td>
+                
+                <td>26,000</td>
+                <td>Graduation or equivalent</td>
+                <td>Online</td>
+              </tr>
+              
+            </tbody>
+          </table>
+        </div>
+        
+        
+      </div>
+      
+      <!-- Learning Methodology -->
+      <div class="content-block mt-4">
+        <h3 class="mb-4">Learning Methodology</h3>
+        <p>Our Online M.Sc programs employ a comprehensive and interactive learning methodology:</p>
+        
+        <div class="row text-center mt-4">
+          <div class="col-md-4">
+            <div class="learning-method">
+              <div class="method-icon">
+                <i class="ti-video-camera"></i>
+              </div>
+              <h5>Live & Recorded Lectures</h5>
+              <p>Engage with expert faculty and learn at your own pace.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="learning-method">
+              <div class="method-icon">
+                <i class="ti-blackboard"></i>
+              </div>
+              <h5>Interactive LMS</h5>
+              <p>Access e-content, assignments, and resources online.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="learning-method">
+              <div class="method-icon">
+                <i class="ti-comments"></i>
+              </div>
+              <h5>Doubt Clearing Sessions</h5>
+              <p>Interactive sessions for query resolution with educators.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="row text-center mt-4">
+          <div class="col-md-4">
+            <div class="learning-method">
+              <div class="method-icon">
+                <i class="ti-ruler-alt-2"></i>
+              </div>
+              <h5>Virtual Labs & Simulations</h5>
+              <p>Hands-on experience with practical concepts (where applicable).</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="learning-method">
+              <div class="method-icon">
+                <i class="ti-agenda"></i>
+              </div>
+              <h5>Research Projects</h5>
+              <p>Apply knowledge through dissertations and capstone projects.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="learning-method">
+              <div class="method-icon">
+                <i class="ti-medall-alt"></i>
+              </div>
+              <h5>Continuous Assessment</h5>
+              <p>Regular quizzes, assignments, and exams to track progress.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Certification -->
+      <div class="content-block mt-4 bg-light p-4 rounded">
+        <h3 class="mb-4">Certification</h3>
+        <p>Upon successful completion of the Online M.Sc program, students will be awarded:</p>
+        <ul class="list-styled">
+          <li>Master of Science (M.Sc) degree in the chosen specialization.</li>
+          <li>Degree from a UGC-recognized and NAAC accredited university.</li>
+          <li>Official mark sheets and degree certificate (digital and/or physical).</li>
+          <li>Enhanced credentials for career advancement, PhD applications, and government jobs.</li>
+        </ul>
+        <p class="mt-3"><strong>Note:</strong> The degree certificate generally does not mention "Online" mode, ensuring parity with on-campus degrees.</p>
+      </div>
+      
+      <!-- FAQ Section -->
+      <div class="content-block mt-4">
+        <h3 class="mb-4">Frequently Asked Questions</h3>
+        
+        <div class="accordion" id="faqAccordion">
+          <div class="card border-0 mb-3">
+            <div class="card-header bg-white p-0 border-0" id="faqHeadingOneMsc">
+              <button class="btn btn-link text-dark font-weight-bold text-left w-100 py-3" type="button" data-toggle="collapse" data-target="#faqCollapseOneMsc" aria-expanded="true" aria-controls="faqCollapseOneMsc">
+                What is an online M.Sc program?
+              </button>
+            </div>
+            <div id="faqCollapseOneMsc" class="collapse show" aria-labelledby="faqHeadingOneMsc" data-parent="#faqAccordion">
+              <div class="card-body">
+                An Online M.Sc (Master of Science) is a 2-year postgraduate degree program delivered via an online platform. It offers advanced learning in various science disciplines, providing flexibility for students to study from anywhere while receiving a UGC-recognized degree.
+              </div>
+            </div>
+          </div>
+          
+          <div class="card border-0 mb-3">
+            <div class="card-header bg-white p-0 border-0" id="faqHeadingTwoMsc">
+              <button class="btn btn-link text-dark font-weight-bold text-left w-100 py-3 collapsed" type="button" data-toggle="collapse" data-target="#faqCollapseTwoMsc" aria-expanded="false" aria-controls="faqCollapseTwoMsc">
+                What are the eligibility criteria for an online M.Sc program?
+              </button>
+            </div>
+            <div id="faqCollapseTwoMsc" class="collapse" aria-labelledby="faqHeadingTwoMsc" data-parent="#faqAccordion">
+              <div class="card-body">
+                Generally, candidates need a Bachelor's degree (B.Sc. or equivalent) in a relevant science stream from a recognized university with a minimum percentage (usually 50%). Specific subject prerequisites might apply depending on the M.Sc specialization.
+              </div>
+            </div>
+          </div>
+          
+          <div class="card border-0 mb-3">
+            <div class="card-header bg-white p-0 border-0" id="faqHeadingThreeMsc">
+              <button class="btn btn-link text-dark font-weight-bold text-left w-100 py-3 collapsed" type="button" data-toggle="collapse" data-target="#faqCollapseThreeMsc" aria-expanded="false" aria-controls="faqCollapseThreeMsc">
+                What specializations are available in online M.Sc programs?
+              </button>
+            </div>
+            <div id="faqCollapseThreeMsc" class="collapse" aria-labelledby="faqHeadingThreeMsc" data-parent="#faqAccordion">
+              <div class="card-body">
+                A variety of specializations are offered, including M.Sc in Data Science, Mathematics, Environmental Science, Chemistry, Physics, IT/Computer Science, and more. The availability depends on the university.
+              </div>
+            </div>
+          </div>
+          
+          <div class="card border-0 mb-3">
+            <div class="card-header bg-white p-0 border-0" id="faqHeadingFourMsc">
+              <button class="btn btn-link text-dark font-weight-bold text-left w-100 py-3 collapsed" type="button" data-toggle="collapse" data-target="#faqCollapseFourMsc" aria-expanded="false" aria-controls="faqCollapseFourMsc">
+                What are the career prospects after an online M.Sc?
+              </button>
+            </div>
+            <div id="faqCollapseFourMsc" class="collapse" aria-labelledby="faqHeadingFourMsc" data-parent="#faqAccordion">
+              <div class="card-body">
+                Online M.Sc graduates can pursue careers as Research Scientists, Data Scientists, Environmental Consultants, Chemists, Physicists, Statisticians, Academicians, and roles in R&D, IT, healthcare, and government sectors, depending on their specialization.
+              </div>
+            </div>
+          </div>
+
+          <div class="card border-0 mb-3">
+            <div class="card-header bg-white p-0 border-0" id="faqHeadingFiveMsc">
+              <button class="btn btn-link text-dark font-weight-bold text-left w-100 py-3 collapsed" type="button" data-toggle="collapse" data-target="#faqCollapseFiveMsc" aria-expanded="false" aria-controls="faqCollapseFiveMsc">
+                Are online M.Sc degrees recognized for PhD and government jobs?
+              </button>
+            </div>
+            <div id="faqCollapseFiveMsc" class="collapse" aria-labelledby="faqHeadingFiveMsc" data-parent="#faqAccordion">
+              <div class="card-body">
+                Yes, Online M.Sc degrees from UGC-recognized universities are valid and recognized for pursuing PhD programs and for employment in government jobs, provided they meet the specific eligibility criteria set by the respective institutions or employing bodies.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      
+      <!-- CTA Section -->
+      <div class="content-block mt-5 text-center">
+        <h3 class="mb-4">Advance Your Scientific Career with an Online M.Sc!</h3>
+        <p class="lead mb-4">Explore specialized knowledge and research opportunities with our UGC-recognized Online M.Sc programs.</p>
+        
+        <div class="d-flex justify-content-center">
+          <a href="contact.html" class="btn btn-primary btn-lg mr-3">Request Information</a>
+          
+          <!-- Apply Now Button - Will show dropdown if logged in, otherwise goes to login -->
+          <button id="applyNowBtn" class="btn btn-outline-primary btn-lg">Apply Now</button>
+        </div>
+        
+        <!-- Hidden Application Section (shown only if logged in) -->
+        <div id="applicationSection" style="display: none; margin-top: 30px; max-width: 500px; margin-left: auto; margin-right: auto;">
+          <div class="card p-4">
+            <h4 class="mb-3">Select Your University</h4>
+            <!-- imp to add -->
+            <select id="universitySelect" class="form-control mb-3"></select>
+            <button id="submitApplication" class="btn btn-success btn-block">Submit Application</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- footer remains the same as before -->
+<footer>
+    <!-- newsletter -->
+    <div class="newsletter">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-9 ml-auto bg-primary py-5 newsletter-block">
+            <h3 class="text-white">Get Free Consultation</h3>
+            <form action="#">
+              <div class="input-wrapper">
+                <input type="email" class="form-control border-0" id="newsletter" name="newsletter" placeholder="Enter Your Email...">
+                <button type="submit" value="send" class="btn btn-primary">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- footer content -->
+    <div class="footer bg-footer section border-bottom">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-sm-8 mb-5 mb-lg-0">
+          <!-- logo -->
+          <a class="logo-footer" href="index.html">
+            <img class="img-fluid mb-4" src="images/logo.png" alt="logo" width="180">
+          </a>
+          <ul class="list-unstyled">
+            <li class="mb-2">
+              <a href="https://maps.google.com/?q=UG-11B, JAINA TOWER-2, DISTRICT CENTRE, JANAKPURI, NEW DELHI-110058" 
+                 target="_blank" 
+                 rel="noopener noreferrer"
+                 class="text-decoration-none text-white hover-text-primary">
+                <i class="ti-location-pin mr-2"></i>UG-11B, JAINA TOWER-2, DISTRICT CENTRE, JANAKPURI, NEW DELHI-110058
+              </a>
+            </li>
+            <li class="mb-2">
+              <a href="tel:+919220945806" 
+                 class="text-decoration-none text-white hover-text-primary">
+                <i class="ti-mobile mr-2"></i>+919220945806
+              </a>
+            </li>
+            <li class="mb-2">
+              <a href="mailto:info@edutecservices.com" 
+                 class="text-decoration-none text-white hover-text-primary">
+                <i class="ti-email mr-2"></i>info@edutecservices.com
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- company -->
+        <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
+          <h4 class="text-white mb-5">COMPANY</h4>
+          <ul class="list-unstyled">
+            <li class="mb-3"><a class="text-color" href="about.html">About Us</a></li>
+            
+            <li class="mb-3"><a class="text-color" href="contact.html">Contact us</a></li>
+            
+          </ul>
+        </div>
+        <!-- services -->
+        <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
+          <h4 class="text-white mb-5">SERVICES</h4>
+          <ul class="list-unstyled">
+           
+            <li class="mb-3"><a class="text-color" href="Addmision-procedure.html">Admission Procedure</a></li>
+            <li class="mb-3"><a class="text-color" href="login.html">Login</a></li>
+            
+          </ul>
+        </div>
+        
+        
+      </div>
+    </div>
+  </div>
+    <!-- copyright -->
+    <div class="copyright py-4 bg-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-7 text-sm-left text-center">
+            <p class="mb-0">Copyright ©
+              <script>
+                var CurrentYear = new Date().getFullYear()
+                document.write(CurrentYear)
+              </script> 
+              EduTec services . All Rights Reserved.
+            </p>
+          </div>
+          <div class="col-sm-5 text-sm-right text-center">
+            <ul class="list-inline">
+              <li class="list-inline-item"><a class="d-inline-block p-2" href="https://facebook.com/EduTec services "><i class="ti-facebook text-primary"></i></a></li>
+              <li class="list-inline-item"><a class="d-inline-block p-2" href="https://twitter.com/EduTec services "><i class="ti-twitter-alt text-primary"></i></a></li>
+              <li class="list-inline-item"><a class="d-inline-block p-2" href="https://instagram.com/EduTec services "><i class="ti-instagram text-primary"></i></a></li>
+              <li class="list-inline-item"><a class="d-inline-block p-2" href="https://linkedin.com/company/EduTec services "><i class="ti-linkedin text-primary"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- /footer -->
+  
+  <!-- jQuery -->
+  <script src="plugins/jQuery/jquery.min.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="plugins/bootstrap/bootstrap.min.js"></script>
+  <!-- slick slider -->
+  <script src="plugins/slick/slick.min.js"></script>
+  <!-- aos -->
+  <script src="plugins/aos/aos.js"></script>
+  <!-- venobox popup -->
+  <script src="plugins/venobox/venobox.min.js"></script>
+  <!-- filter -->
+  <script src="plugins/filterizr/jquery.filterizr.min.js"></script>
+  <!-- google map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU"></script>
+  <script src="plugins/google-map/gmap.js"></script>
+  
+  <!-- Main Script -->
+  <script src="js/script.js"></script>
+  
+  <!-- Initialize Shuffle for Course Filtering -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Shuffle/5.2.3/shuffle.min.js"></script>
+
+</body>
+</html>
